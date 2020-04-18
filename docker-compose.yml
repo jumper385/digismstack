@@ -1,0 +1,14 @@
+version: '3'
+services: 
+    web: 
+        build: ./digism
+        expose: 
+            - "3000"
+        volumes:
+            - ./digism:/app
+    nginx:
+        build: ./nginx
+        ports:
+            - "80:80"
+        depends_on: 
+            - web
