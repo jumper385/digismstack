@@ -1,0 +1,3 @@
+[submodule "digism"]
+	path = digism
+	url = https://github.com/jumper385/digism
