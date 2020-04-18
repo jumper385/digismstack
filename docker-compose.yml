@@ -6,9 +6,11 @@ services:
             - "3000"
         volumes:
             - ./digism:/app
+        reboot: unless_stopped
     nginx:
         build: ./nginx
         ports:
             - "80:80"
         depends_on: 
             - web
+        reboot: unless_stopped
